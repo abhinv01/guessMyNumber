@@ -3,7 +3,7 @@
 /******************Declarations**********************/
 let magicNumber = Math.trunc(Math.random() *20) + 1;                    //created a magic number betwn 1 to 20
 const secretNumber = document.querySelector('.number');                    //for time being making
-secretNumber.textContent = magicNumber;                                     //random number visible
+secretNumber.textContent = "?";                                     //random number visible
 
 const btnAgain = document.querySelector('.again');
 const btnCheck = document.querySelector('.check');
@@ -39,14 +39,14 @@ function check()
              }
             else if(guess>magicNumber)
             {
-                userMessage.textContent = "You are to high...";
+                userMessage.textContent = "You are too high...";
                 score--;
                 gameScore.textContent = score;
 
             }
             else if(guess<magicNumber)
             {
-                userMessage.textContent = "You are to low...";
+                userMessage.textContent = "You are too low...";
                 score--;
                 gameScore.textContent = score;
             }
