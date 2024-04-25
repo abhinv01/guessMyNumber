@@ -54,6 +54,7 @@ function check()
         else
         {
             score--;
+            gameScore.textContent = score;
             document.querySelector('body').style.backgroundColor = 'red';
             userMessage.textContent = "You are out of chances...";  
             secretNumber.style.width = '30rem';
