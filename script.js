@@ -10,7 +10,7 @@ const btnCheck = document.querySelector('.check');
 const userMessage = document.querySelector('.message');
 const gameScore = document.querySelector('.score');
 const gameHighScore  = document.querySelector('.highscore');
-let score = 20
+let score = 7
 let highscore = 0
 gameScore.textContent = score;
 gameHighScore.textContent = 0;
@@ -22,9 +22,9 @@ function check()
 {
     const guess = Number(document.querySelector('.guess').value);
 
-    if(guess>0 && guess<21)
+    if(guess>0 && guess<=20)
     {
-        if (score > 0)
+        if (score > 1)
         {    
             if(guess === magicNumber)
             {
@@ -66,7 +66,7 @@ function check()
 
 function again()
 {
-    score = 20;
+    score = 7;
     gameScore.textContent = score;
     document.querySelector('body').style.backgroundColor = 'rgb(34,34,34)';
     secretNumber.style.width = '15rem';
