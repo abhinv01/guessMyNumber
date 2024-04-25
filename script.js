@@ -53,6 +53,7 @@ function check()
         }
         else
         {
+            score--;
             document.querySelector('body').style.backgroundColor = 'red';
             userMessage.textContent = "You are out of chances...";  
             secretNumber.style.width = '30rem';
