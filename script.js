@@ -51,13 +51,14 @@ function check()
                 gameScore.textContent = score;
             }
         }
-        else
-        {
-            score--;
-            gameScore.textContent = score;
-            document.querySelector('body').style.backgroundColor = 'red';
-            userMessage.textContent = "You are out of chances...";  
-            secretNumber.style.width = '30rem';
+        else{   
+            if(score > 0){
+                score--;
+                gameScore.textContent = score;
+                document.querySelector('body').style.backgroundColor = 'red';
+                userMessage.textContent = "You are out of chances...";  
+                secretNumber.style.width = '30rem';
+            }
         }
     }
     else
